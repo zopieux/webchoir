@@ -1,0 +1,42 @@
+@use "@picocss/pico/scss/pico" with ($theme-color: "indigo")
+@use "@pdfslick/solid/dist/pdf_viewer.css"
+
+:root
+    --pico-form-element-spacing-vertical: 0.5rem
+    --pico-form-element-spacing-horizontal: 1.1rem
+
+#root
+    display: flex
+    flex-direction: column
+    height: 100vh
+    gap: 1rem
+
+main
+    flex: 1
+
+#waveform
+    width: 100%
+
+h1 small
+    font-size: 1rem
+    opacity: .6
+
+#play-btn > span
+    font-size: 0.7rem
+    display: block
+
+.pdfSlickContainer
+    --page-margin: 0 !important
+    --page-border: 0 !important
+    display: flex
+    justify-content: space-around
+
+@media not (display-mode: fullscreen)
+    #root
+        max-width: 960px
+        margin: 0 auto
+        padding: 1rem 0
+
+@media (display-mode: fullscreen)
+    aside
+        display: none
